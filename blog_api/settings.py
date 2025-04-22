@@ -67,6 +67,16 @@ CORS_ALLOWED_ORIGINS = [
     "https://ana-md.netlify.app",
 ]
 
+# Allow all origins for development — or limit to your React domain in production
+CORS_ALLOW_ALL_ORIGINS = True
+
+# If you're using default_headers
+from corsheaders.defaults import default_headers
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'X-CSRFTOKEN',
+]
+
 ROOT_URLCONF = 'blog_api.urls'
 
 TEMPLATES = [
