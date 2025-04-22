@@ -25,8 +25,14 @@ SECRET_KEY = 'django-insecure-v(nl-r$44cd02l_zmcf3bl_0c&ih!)g401=h^m)h)9z$qi74j6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['django-blog-api-8osr.onrender.com']
 
+=======
+ALLOWED_HOSTS = [
+    "https://django-blog-api-8osr.onrender.com/"
+]
+>>>>>>> c0048ddfbedbcc313406b677143a638f7b5ce973
 
 
 # Application definition
