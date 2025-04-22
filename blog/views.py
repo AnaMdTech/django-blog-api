@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import BlogPost
+from .serializers import BlogPostSerializer
 
-# Create your views here.
+class BlogPostListAPIView(generics.ListAPIView):
+    queryset = BlogPost.objects.all().order_by('-published_at')
+    serializer_class = BlogPostSerializer
