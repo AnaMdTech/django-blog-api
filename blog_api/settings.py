@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-v(nl-r$44cd02l_zmcf3bl_0c&ih!)g401=h^m)h)9z$qi74j6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-blog-api-8osr.onrender.com']
+import os
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 
 
 
