@@ -5,7 +5,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True)
     description = models.TextField()
     content = models.TextField()
-    img = models.URLField()
+    image = models.ImageField(upload_to='blog_images/', blank=True, null=True)
     published_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
